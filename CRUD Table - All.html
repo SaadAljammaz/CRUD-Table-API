@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>CRUD Table - All</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script type="text/javascript" src="jsAll.js"></script>
+</head>
+<body>
+
+	<button id="addDataButton" class="open-button">Add Data</button>
+
+	<div class="form-popup" id="myForm">
+		<form id="submitDataForm" action="javascript:void(0);" method="POST" class="form-container">
+	    	<h1>Adding new data</h1>
+
+		    <input type="text" id="add-user-Id" placeholder="Enter user id" required>
+		    <input type="text" id="add-ID" placeholder="Enter ID"required>
+		    <input type="text" id="add-Title" placeholder="Enter Title" required>
+		    <input type="text" id="add-Completed" placeholder="Enter completed status"required>
+
+		    <button id="addDataButton2" type="submit" class="btn">Add</button>
+		    <button id="closeDataForm" type="button" class="btn cancel">Close</button>
+  		</form>
+	</div>
+
+	<div id="spoiler" role="aria-hidden">
+		<form action="javascript:void(0);" method="POST" id="saveEdit">
+			<input type="text" id="edit-user-Id">
+			<input type="text" id="edit-ID">
+			<input type="text" id="edit-Title">
+			<input type="text" id="edit-Completed">
+			<input class="buttons" type="submit" value="Edit"/>
+			<a id="closeDataEdit" class="buttons" aria-label="Close">&#10060;</a>
+		</form>
+	</div>
+
+	<p id="counter"></p>
+
+	<table>
+	 <tr id="column">
+	 </tr>
+	 <tbody id="my_data">
+	 </tbody>
+	</table>
+
+</body>
+</html>
