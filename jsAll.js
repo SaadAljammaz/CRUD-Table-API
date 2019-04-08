@@ -19,15 +19,19 @@ function buildTable(list,table) {
 		var myObject = list[0];
 		var keyNames = Object.keys(myObject);
 		var data3 = '';
+		data3 += '<th scope="col">#</th>';
 		for (let i = 0; i < keyNames.length; i++) {
-			data3 += '<th>' + keyNames[i] + '</th>';
+			data3 += '<th scope="col">' + keyNames[i] + '</th>';
 		}
+		data3 += '<th scope="col"></th>';
+		data3 += '<th scope="col"></th>';
 		el3.innerHTML = data3;
 		// adding the data to the table
 		el = document.getElementById(table);
 		var data2 = '';
 			for (i = 0; i < list.length; i++) {
 				data2 += '<tr>';
+				data2 += '<th scope="row">' + (i+1) + '</th>';
 				data2 += '<td>' + list[i].userId + '</td>';
 				data2 += '<td>' + list[i].id + '</td>';
 				data2 += '<td>' + list[i].title + '</td>';
